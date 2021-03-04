@@ -16,6 +16,7 @@ export default {
   },
   setup () {
     const store = useStore()
+    store.dispatch('changeActiveIdx', 0)
     const idx = computed(() => store.state.activeIdx)
 
     return {

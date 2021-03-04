@@ -12,6 +12,134 @@
           </view>
         </view>
       </view>
+      <view class="mainBottom">
+        <view class="rankContainer">
+          <view class="rankHeader"></view>
+          <view class="rankBody">
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+            <view class="bookItem">
+              <image 
+                src="https://wfqqreader-1252317822.image.myqcloud.com/cover/199/22261199/t6_22261199.jpg"
+                style="width: 55px; height: 80px"
+              />
+              <view class="bookIndex">
+                <text class="bookName">1  剑来</text>
+                <text class="authorName">烽火戏诸侯</text>
+              </view>
+            </view>
+          </view>
+          <view class="rankFooter"></view>
+        </view>
+      </view>
     </view>
     <NavBar class="navBar" v-if="idx === 1"></NavBar>
   </view>
@@ -28,6 +156,7 @@ export default {
   },
   setup () {
     const store = useStore()
+    store.dispatch('changeActiveIdx', 1)
     const idx = computed(() => store.state.activeIdx)
 
     return {
@@ -49,8 +178,9 @@ export default {
   }
   .bookMain {
     flex: 1;
+    overflow-y: auto;
     .mainTop {
-      margin-bottom: 12px;
+      // margin-bottom: 12px;
       padding-bottom: 80px;
       background: #17181a;
       .mainStatic {
@@ -58,7 +188,7 @@ export default {
         width: 100%;
         height: 144px;
         position: static;
-        background-color: #17181a;
+        // background-color: #17181a;
       }
       .mainBody {
         margin-top: 8px;
@@ -88,9 +218,49 @@ export default {
             font-size: 32px;
             color: #eef0f4;
             background: rgba(238,240,244,.1);
-            .weui-input {
+            ::v-deep .weui-input {
               height: 100%;
               line-height: 75px;
+            }
+          }
+        }
+      }
+    }
+    .mainBottom {
+      height: auto;
+      // background: #1f2022;
+      .rankContainer {
+        // margin-bottom: 40px;
+        // width: 49%;
+        height: auto;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 20px 40px;
+        .rankHeader {
+          padding: 24px 0 0;
+          height: 42.5px;
+          background: url('https://weread-1258476243.file.myqcloud.com/assets/ranklist.novel.chart_title.ZPYpNvEHel.png') no-repeat;
+          background-size: 50% 100%;
+        }
+        .rankBody {
+          .bookItem {
+            display: flex;
+            padding: 12px 0;
+            .bookIndex {
+              display: flex;
+              flex-direction: column;
+              font-size: 16px;
+              justify-content: center;
+              padding-left: 30px;
+              .bookName {
+                font-size: 30px;
+                font-weight: 600;
+              }
+              .authorName {
+                color: #666;
+                font-size: 15px;
+                margin: 12px 0 0 30px;
+              }
             }
           }
         }
